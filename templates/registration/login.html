@@ -2,8 +2,9 @@
 
 {% block title %}OKBT Login{% endblock %}
 
+{% block style %} style="background-color:lightpink;" {% endblock %}
+
 {% block content %}
-<body style="background-color:lightpink;">
 <h2>Log In</h2>
 <form method="post">
   {% csrf_token %}

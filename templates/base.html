@@ -5,7 +5,7 @@
     <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
 </head>
 
-<body style="background-color: darkseagreen;">
+<body {% block style %} style="background-color:darkcyan;" {% endblock %}>
   <main>
     {% block content %}
     {% endblock %}
