@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>OKBT Log In</title>
-</head>
+{% extends "base.html" %}
+
+{% block title %}OKBT Login{% endblock %}
+
+{% block content %}
 <body style="background-color:lightpink;">
 <h2>Log In</h2>
 <form method="post">
@@ -11,6 +10,4 @@
   {{ form }}
   <button type="submit">Log In</button>
 </form>
-
-</body>
-</html>
+{% endblock %}
