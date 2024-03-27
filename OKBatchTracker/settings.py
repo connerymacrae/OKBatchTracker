@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kombuchacalendar.apps.KombuchacalendarConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
