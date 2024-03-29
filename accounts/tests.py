@@ -7,19 +7,20 @@ User = get_user_model()
 class SignUpTests(TestCase):
 
     def test_signup_view(self):
-        response = self.client.post('/accounts/signup/')
+        response = self.client.get('/accounts/signup/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'registration/signup.html')
 
     def test_signup_form(self):
-        response = self.client.post('/accounts/signup/')
-        form = UserRegisterForm({'username': 'test',
-                                 'email': 'john@john.com',
-                                 'password1': 'XD78xd87!',
-                                 'password2': 'XD78xd87!'})
-        self.assertTrue(form.is_valid())
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(User.objects.count(), 1)
+        data = {'username': 'test',
+                'email': 'john@john.com',
+                'password1': 'XD78xd87!',
+                'password2': 'XD78xd87!'}
+        response = self.client.post('/accounts/signup/', data=data)
+        self.assertEqual(response.status_code, 302)
+        created_user = User.objects.get(username='test')
+        self.assertEqual(created_user.email, 'john@john.com')
+        #self.assertTemplateUsed(response, 'registration/login.html')
 
 
 class AccountsTest(TestCase):
