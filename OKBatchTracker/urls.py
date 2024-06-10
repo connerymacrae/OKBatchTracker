@@ -26,5 +26,6 @@ urlpatterns = [
     # path('kombuchacalendar/', include('kombuchacalendar.urls')),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('kombuchacalendar/', include('kombuchacalendar.urls')),
+    path('', RedirectView.as_view(url='kombuchacalendar/')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

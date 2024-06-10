@@ -7,5 +7,5 @@ from accounts.forms import UserRegisterForm
 
 class SignUpView(CreateView):
     form_class = UserRegisterForm
-    success_url = reverse_lazy("login")
+    success_url = reverse_lazy("index")
     template_name = "registration/signup.html"
