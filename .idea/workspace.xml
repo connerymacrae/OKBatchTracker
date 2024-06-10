@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baebd904-4e56-44b8-8dcc-6803427c1ea6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kombuchacalendar/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kombuchacalendar/migrations/0002_batch_starter_type.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_change_done.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OKBatchTracker/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/OKBatchTracker/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OKBatchTracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/OKBatchTracker/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kombuchacalendar/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kombuchacalendar/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kombuchacalendar/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/tests/test_signup_and_account_first_pass.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/tests/test_signup_and_account_first_pass.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +78,7 @@
       <workItem from="1711394745933" duration="688000" />
       <workItem from="1711396246504" duration="15595000" />
       <workItem from="1712957170776" duration="17159000" />
-      <workItem from="1718043509122" duration="6041000" />
+      <workItem from="1718043509122" duration="7639000" />
     </task>
     <servers />
   </component>
