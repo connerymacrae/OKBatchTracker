@@ -18,5 +18,8 @@ class Batch(models.Model):
 
     starter_type = models.CharField(max_length=1, default='k', choices=TYPE)
 
+    class Meta:
+        verbose_name_plural = "Batches"
+
     def __str__(self):
         return f'{self.name}({self.starter_type})-{self.date_brewed}'
