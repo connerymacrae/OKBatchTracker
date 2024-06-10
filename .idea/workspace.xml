@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baebd904-4e56-44b8-8dcc-6803427c1ea6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/kombuchacalendar/brew_batch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kombuchacalendar/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kombuchacalendar/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kombuchacalendar/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kombuchacalendar/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "create-batch",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
