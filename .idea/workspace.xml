@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baebd904-4e56-44b8-8dcc-6803427c1ea6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/tests/test_signup_and_account_first_pass.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/tests/test_signup_and_account_first_pass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kombuchacalendar/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kombuchacalendar/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "password-change-resolve",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
