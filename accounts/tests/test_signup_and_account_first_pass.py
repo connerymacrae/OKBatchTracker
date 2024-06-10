@@ -25,11 +25,11 @@ class SignUpTests(TestCase):
 
 class AccountsTest(TestCase):
     def setUp(self):
-        test_user = User.objects.create_user({'username': 'johnjohn',
+        self.test_user = User.objects.create_user({'username': 'johnjohn',
                                               'email': 'john@john.com',
                                               'password1': 'XD78xd87!',
                                               'password2': 'XD78xd87!'})
-        test_user.save()
+        self.test_user.save()
 
     def test_user_can_login(self):
         """A user should be able to log in with username and password"""
@@ -42,3 +42,13 @@ class AccountsTest(TestCase):
 
     def test_user_can_reset_password(self):
         """A user should be able to reset password using email"""
+        data = self.test_user
+        #get the password reset form
+        response = self.client.post('/accounts/password/reset/', data=data)
+        #user enters email and email is sent
+        #check outbox for email increase of 1
+        #retrieve email reset token
+        #create new password
+        #redirect to success url
+        #log out user
+        #test that new password works

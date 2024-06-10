@@ -31,14 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #batch tracker app
+    'kombuchacalendar.apps.KombuchacalendarConfig',
+    #accounts app
+    'accounts.apps.AccountsConfig',
+    #default django app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kombuchacalendar.apps.KombuchacalendarConfig',
-    'accounts.apps.AccountsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -125,5 +129,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "kombuchacalendar:index"
+LOGOUT_REDIRECT_URL = "kombuchacalendar:index"
