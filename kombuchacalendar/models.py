@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.conf import settings
 from django.utils import timezone
 
@@ -12,7 +13,7 @@ class Batch(models.Model):
     date_brewed = models.DateField(default=timezone.now)
 
     TYPE = (
-        ("k", 'Kombucha'),
+        ('k', 'Kombucha'),
         ('j', 'Jun')
     )
 
@@ -21,5 +22,15 @@ class Batch(models.Model):
     class Meta:
         verbose_name_plural = 'batches'
 
+    def starter_type_verbose(self):
+        return dict(Batch.TYPE)[self.starter_type]
+
+    @property
+    def date_brewed_display(self):
+        return self.date_brewed.strftime(settings.UPDATED_DATE_FORMAT)
+
     def __str__(self):
-        return f'{self.name}({self.starter_type})-{self.date_brewed}'
+        return f'{self.name}({self.get_starter_type_display()}):{self.date_brewed_display}'
+
+    def get_absolute_url(self):
+        return reverse('kombuchacalendar:batch_detail', kwargs={'pk': self.pk})

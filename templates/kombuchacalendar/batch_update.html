@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+
+    <p><a href="{% url 'kombuchacalendar:batch_detail' batch.id %}">{{ batch }}</a></p>
+
+    <p>Batch Update:</p>
+
+    <form action="{% url 'kombuchacalendar:batch_update' batch.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+    <button name="submit">Update Batch</button>
+    </form>
+
+{% endblock content %}

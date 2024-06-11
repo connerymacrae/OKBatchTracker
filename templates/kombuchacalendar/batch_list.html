@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>What's Boochin', {{ user.first_name }}?</h1>
+  {% if batch_list %}
+    <ul>
+        {% for batch in batch_list %}
+          <li>
+            <a href="{{ batch.get_absolute_url }}">{{ batch }}</a>
+          </li>
+        {% endfor %}
+    </ul>
+  {% else %}
+    <p>
+        You aren't brewing anything right now!
+        <a href="{% url 'kombuchacalendar:brew_batch' %}">Start Brewing?</a>
+    </p>
+  {% endif %}
+{% endblock content %}
+

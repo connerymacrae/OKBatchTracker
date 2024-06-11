@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Lets Brew!</h1>
+
+<form action="{% url 'kombuchacalendar:brew_batch' %}" method="post">
+  {% csrf_token %}
+  {{ form.as_div }}
+  <button name="submit">Brew It!</button>
+</form>
+
+{% endblock %}

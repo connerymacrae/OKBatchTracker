@@ -1,0 +1,14 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ batch.name }}</h1>
+  <h2>{{ batch.date_brewed }}</h2>
+    <p>{{ batch.description }}</p>
+
+    <p>
+        <a href="{% url 'kombuchacalendar:batch_update' batch.id %}">Update Batch Details</a>
+    </p>
+    <p>
+        <a href="{% url 'kombuchacalendar:batches' %}"> Back to Brewery</a>
+    </p>
+{% endblock content %}
