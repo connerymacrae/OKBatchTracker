@@ -6,7 +6,8 @@
 {% if user.is_authenticated %}
     <h1>Welcome to {{ user.first_name }}'s Kombucha Factory!</h1>
     <h2>You have {{ num_batches }} batches of Kombucha brewing.</h2>
-    <h3><a href="{% url 'kombuchacalendar:brew_batch' %}">Start Brewing?</a></h3>
+    <h3> <a href="{% url 'kombuchacalendar:batches' %}">Take a Look!</a></h3>
+    <h4><a href="{% url 'kombuchacalendar:brew_batch' %}">Start Brewing?</a></h4>
 <p><a href="{% url 'password_change' %}">Password Change</a></p>
 <form action="{% url 'logout' %}" method="post">
   {% csrf_token %}
