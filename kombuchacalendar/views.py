@@ -41,3 +41,21 @@ class BatchListView(LoginRequiredMixin, generic.ListView):
 
 class BatchDetailView(LoginRequiredMixin, generic.DetailView):
     model = Batch
+
+
+@login_required
+def batch_update(request, batch_id):
+    batch = Batch.objects.get(id=batch_id)
+
+    if request.method != 'POST':
+        # prefill form with current entry
+        form = BrewBatchForm(instance=batch)
+    else:
+        # POST data submitted, process data
+        form = BrewBatchForm(instance=batch, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('kombuchacalendar:batch_detail', pk=batch.id)
+
+    context = {'form': form, 'batch': batch}
+    return render(request, 'kombuchacalendar/batch_update.html', context)
