@@ -2,7 +2,7 @@
 
 {% block content %}
 
-  <h1>What's Boochin', {{ user.first_name }}?</h1>
+  <h1>Past Booches, {{ user.first_name }}?</h1>
   {% if batch_list %}
     <ul>
         {% for batch in batch_list %}
@@ -12,13 +12,11 @@
         {% endfor %}
     </ul>
   {% else %}
-    <p>You aren't brewing anything right now!</p>
+    <p>
+        You don't have any archived batches
+    </p>
   {% endif %}
     <p>
-        <a href="{% url 'kombuchacalendar:brew_batch' %}">Start Brewing?</a>
-    </p>
-    <p>
-        <a href="{% url 'kombuchacalendar:archive' %}">Past Batches</a>
+        <a href="{% url 'kombuchacalendar:batches' %}">Back to Booches?</a>
     </p>
 {% endblock content %}
-

@@ -75,7 +75,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'OKBatchTracker.wsgi.application'
 
-UPDATED_DATE_FORMAT = '%b %-d %Y'
+UPDATED_DATE_FORMAT = '%b %-d, %Y'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
