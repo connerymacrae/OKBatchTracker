@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic
 from .models import Batch
-from .forms import BrewBatchForm
+from .forms import BrewBatchForm, ArchiveBatchForm
 from django.urls import reverse_lazy, reverse
 
 
@@ -59,3 +59,19 @@ def batch_update(request, batch_id):
 
     context = {'form': form, 'batch': batch}
     return render(request, 'kombuchacalendar/batch_update.html', context)
+
+
+@login_required
+def archive_batch(request, batch_id):
+    batch = Batch.objects.get(id=batch_id)
+
+    if request.method != 'POST':
+        form = ArchiveBatchForm(instance=batch)
+    else:
+        form = ArchiveBatchForm(instance=batch, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('kombuchacalendar:batch_detail', pk=batch.id)
+
+    context = {'form': form, 'batch': batch}
+    return render(request, 'kombuchacalendar/archive_batch.html', context)

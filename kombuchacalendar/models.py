@@ -18,6 +18,7 @@ class Batch(models.Model):
     )
 
     starter_type = models.CharField(max_length=1, default='k', choices=TYPE)
+    archive = models.BooleanField(default=False)
 
     class Meta:
         verbose_name_plural = 'batches'
