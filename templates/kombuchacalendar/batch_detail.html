@@ -8,6 +8,15 @@
     <p>
         <a href="{% url 'kombuchacalendar:batch_update' batch.id %}">Update Batch Details</a>
     </p>
+    {% if batch.archive == False %}
+    <p>
+        <a href="{% url 'kombuchacalendar:batch_archive' batch.id %}"><button>Archive Batch</button></a>
+    </p>
+    {% else %}
+    <p>
+        <a href="{% url 'kombuchacalendar:batch_unarchive' batch.id %}"><button>Unarchive Batch</button></a>
+    </p>
+    {% endif %}
     <p>
         <a href="{% url 'kombuchacalendar:batches' %}"> Back to Brewery</a>
     </p>

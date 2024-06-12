@@ -9,7 +9,4 @@ class BrewBatchForm(forms.ModelForm):
         model = Batch
         fields = ['date_brewed', 'name', 'description', 'starter_type']
 
-class ArchiveBatchForm(forms.ModelForm):
-    class Meta:
-        model = Batch
-        fields =['archive']
+
