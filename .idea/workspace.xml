@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baebd904-4e56-44b8-8dcc-6803427c1ea6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/kombuchacalendar/batch_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/kombuchacalendar/batch_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kombuchacalendar/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kombuchacalendar/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kombuchacalendar/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/kombuchacalendar/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="baebd904-4e56-44b8-8dcc-6803427c1ea6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "create-batch",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,6 +75,7 @@
       <workItem from="1711396246504" duration="15595000" />
       <workItem from="1712957170776" duration="17159000" />
       <workItem from="1718043509122" duration="7639000" />
+      <workItem from="1719412040337" duration="324000" />
     </task>
     <servers />
   </component>
