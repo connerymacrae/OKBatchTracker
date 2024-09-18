@@ -15,7 +15,6 @@ class TestSignupView(TestCase):
         url = reverse('signup')
         self.assertEqual(url, '/accounts/signup/')
 
-
     def test_signup_view_gets_correct_template(self):
         response = self.client.get(reverse('signup'))
         self.assertTemplateUsed(response, 'registration/signup.html',
