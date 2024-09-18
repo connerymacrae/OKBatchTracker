@@ -20,5 +20,9 @@
     <p>
         <a href="{% url 'kombuchacalendar:archive' %}">Past Batches</a>
     </p>
+    <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Log Out</button>
+    </form>
 {% endblock content %}
 

@@ -9,7 +9,7 @@ from accounts.forms import UserRegisterForm
 
 class SignUpView(CreateView):
     form_class = UserRegisterForm
-    success_url = reverse_lazy("kombuchacalendar:index")
+    success_url = reverse_lazy("kombuchacalendar:batches")
     template_name = "registration/signup.html"
 
     def register(self, request):
