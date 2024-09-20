@@ -12,20 +12,30 @@ class SignUpView(CreateView):
     success_url = reverse_lazy("kombuchacalendar:batches")
     template_name = "registration/signup.html"
 
-    def register(self, request):
-        if request.method == 'POST':
-            form = UserCreationForm(request.POST)
-            if form.is_valid():
-                new_user = form.save()
-                messages.info(request, "Thanks for signing up. You are now logged in.")
-                new_user = authenticate(username=form.cleaned_data['username'],
-                                        password=form.cleaned_data['password1'],
-                                        )
-                login(request, new_user)
-                return redirect(self.success_url)
-        else:
-            form = self.form_class(initial=self.initial)
-            return render(request, self.template_name, {'form': form})
+    # def register(self, request):
+    #     if request.method == 'POST':
+    #         form = UserCreationForm(request.POST)
+    #         if form.is_valid():
+    #             new_user = form.save()
+    #             messages.info(request, "Thanks for signing up. You are now logged in.")
+    #             new_user = authenticate(username=form.cleaned_data['username'],
+    #                                     password=form.cleaned_data['password1'],
+    #                                     )
+    #             login(request, new_user)
+    #             return redirect(self.success_url)
+    #     else:
+    #         form = self.form_class(initial=self.initial)
+    #         return render(request, self.template_name, {'form': form})
+    def post(self, request, *args, **kwargs):
+        self.request = request
+        return super().post(request, *args, **kwargs)
+
+    def form_valid(self, form):
+        new_user = form.save()
+        login(self.request, new_user)
+        return redirect(self.success_url)
+
+
 
 
 
