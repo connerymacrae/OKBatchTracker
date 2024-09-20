@@ -3,6 +3,8 @@
 {% block content %}
   <h1>{{ batch.name }}</h1>
   <h2>{{ batch.date_brewed }}</h2>
+    <p>{{ batch.get_starter_type_display }} brewed with {{ batch.get_tea_flavor_display }} and
+        {{ batch.get_sweetener_display }}</p>
     <p>{{ batch.description }}</p>
 
     <p>
