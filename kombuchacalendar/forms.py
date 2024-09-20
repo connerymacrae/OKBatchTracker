@@ -7,6 +7,6 @@ from .models import Batch
 class BrewBatchForm(forms.ModelForm):
     class Meta:
         model = Batch
-        fields = ['date_brewed', 'name', 'description', 'starter_type']
+        fields = ['starter_type', 'tea_flavor', 'sweetener', 'date_brewed', 'description', 'name',]
 
 
