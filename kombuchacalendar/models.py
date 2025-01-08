@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.conf import settings
 from django.utils import timezone
+import datetime
 
 # Create your models here.
 
@@ -48,6 +49,23 @@ class Batch(models.Model):
     @property
     def date_brewed_display(self):
         return self.date_brewed.strftime(settings.UPDATED_DATE_FORMAT)
+
+    @property
+    def batch_age(self):
+        return datetime.date.today() - self.date_brewed
+
+    @property
+    def expectations(self):
+        if self.batch_age < datetime.timedelta(days=7):
+            return "This is how your kombucha should be in the first week...:"
+        elif self.batch_age < datetime.timedelta(days=14):
+            return "This is how your kombucha should be in the second week..."
+        elif self.batch_age < datetime.timedelta(days=21):
+            return "This is how your kombucha should be in the third week..."
+        elif self.batch_age < datetime.timedelta(days=28):
+            return "This is how your kombucha should be in the fourth week..."
+        else:
+            return "Your kombucha is old! You should consider using it as salad dressing..."
 
     def __str__(self):
         return f'{self.name}({self.get_starter_type_display()}):{self.date_brewed_display}'

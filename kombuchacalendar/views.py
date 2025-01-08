@@ -10,7 +10,7 @@ from django.urls import reverse_lazy, reverse
 
 # Create your views here.
 def index(request):
-    num_batches = Batch.objects.filter(archive=False).count
+    num_batches = Batch.objects.filter(archive=False).count()
 
     context = {
         'num_batches': num_batches,

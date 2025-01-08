@@ -1,3 +1,5 @@
+import datetime
+
 from kombuchacalendar.models import Batch
 from django.test import TestCase
 from django.utils import timezone
@@ -40,3 +42,9 @@ class BatchModelTest(TestCase):
     def test_str(self):
         expected_batch_name = f'{self.test_batch.name}({self.test_batch.get_starter_type_display()}):{self.test_batch.date_brewed_display}'
         self.assertEqual(str(self.test_batch), expected_batch_name)
+
+    def test_batch_age(self):
+        self.test_batch.date_brewed = datetime.date.today() - datetime.timedelta(days=7)
+        self.assertEqual(self.test_batch.batch_age, datetime.timedelta(days=7))
+
+
